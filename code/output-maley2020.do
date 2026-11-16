@@ -360,7 +360,7 @@ forvalues i = 1/6 {
     quietly summarize rank_low if rank_low == `i', meanonly
     if r(N) == 0 continue
 
-    quietly levelsof concatgeo if rank_high == `i', local(hrr)
+    quietly levelsof concatgeo if rank_low == `i', local(hrr)
 
     quietly summarize totpopulation if rank_low == `i' & year == 2010, meanonly
     local d10 = r(mean)
