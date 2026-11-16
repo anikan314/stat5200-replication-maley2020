@@ -26,7 +26,7 @@ capture mkdir "${rawdir}"
 capture mkdir "${wddir}"
 
 * Run data pull and cleaning.
-do $root/replication-maley2020.do
+do $root/setup-maley2020.do
 
 * Run replication of tables and figures.
 do $root/output-maley2020.do
